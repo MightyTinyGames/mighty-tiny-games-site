@@ -317,8 +317,17 @@
     <div class="footer-links">
       <a href="https://mightytinyrailways.com/">Mighty Tiny Railways</a>
       <a href="https://youtube.com/@mightytinygames" target="_blank" rel="noopener">YouTube</a>
+      <a class="js-email" data-u="hello" data-d="mightytinygames" data-t="com" href="#">hello [at] mightytinygames [dot] com</a>
     </div>
     &copy; 2026 Mighty Tiny Games MB. All rights reserved.
   </footer>
+
+  <script>
+    document.querySelectorAll(".js-email").forEach(function (el) {
+      var address = el.dataset.u + "@" + el.dataset.d + "." + el.dataset.t;
+      el.href = "mailto:" + address;
+      el.textContent = address;
+    });
+  </script>
 </body>
 </html>
